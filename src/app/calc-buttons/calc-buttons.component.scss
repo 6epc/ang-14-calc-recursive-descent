@@ -1,0 +1,58 @@
+.calc-btns {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+
+  @for $i from 1 to 13 {
+    .g-col-#{$i} { grid-column: $i span; }
+  }
+
+  .btn {
+    background-color: #817c7b;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    transition: background 0.6s;
+
+    &:hover {
+      background: darken(#686261, 5%) radial-gradient(circle, transparent 1%, #686261 1%) center/15000%;
+    }
+
+    &:active {
+      background-color: #fff;
+      background-size: 100%;
+      transition: background 0s;
+    }
+
+    &.math-action {
+      background-color: #fea00f;
+
+      &:hover {
+        background: darken(#fea00f, 10%) radial-gradient(circle, transparent 1%, #fea00f 1%) center/15000%;
+      }
+
+      &:active {
+        background-color: #fff;
+        background-size: 100%;
+        transition: background 0s;
+      }
+    }
+  }
+}
+
+.incomeData {
+  margin: 4px 0;
+  padding: 2px 5px;
+  min-height: 24px;
+  color: #fff;
+  background-color: #433e3b;
+}
+

@@ -1,0 +1,28 @@
+<div class="incomeData">
+  {{incomingData}}
+</div>
+<div class="calc-btns">
+  <button class="btn erase g-col-3" (click)="clearData()">ac</button>
+  <button class="btn g-col-3 math-action" (click)="putData('(')">(</button>
+  <button class="btn g-col-3 math-action" (click)="putData(')')">)</button>
+  <button class="btn g-col-3 math-action" (click)="putData('/')">/</button>
+
+  <button class="btn g-col-3" (click)="putData('7')">7</button>
+  <button class="btn g-col-3" (click)="putData('8')">8</button>
+  <button class="btn g-col-3" (click)="putData('9')">9</button>
+  <button class="btn g-col-3 math-action" (click)="putData('*')">x</button>
+
+  <button class="btn g-col-3" (click)="putData('4')">4</button>
+  <button class="btn g-col-3" (click)="putData('5')">5</button>
+  <button class="btn g-col-3" (click)="putData('6')">6</button>
+  <button class="btn g-col-3 math-action" (click)="putData('-')">-</button>
+
+  <button class="btn g-col-3" (click)="putData('1')">1</button>
+  <button class="btn g-col-3" (click)="putData('2')">2</button>
+  <button class="btn g-col-3" (click)="putData('3')">3</button>
+  <button class="btn g-col-3 math-action" (click)="putData('+')">+</button>
+
+  <button class="btn g-col-3 zero" (click)="putData('0')">0</button>
+  <button class="btn g-col-3" (click)="putData('.')">.</button>
+  <button class="btn g-col-6" (click)="emitData()">=</button>
+</div>
